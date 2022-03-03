@@ -157,7 +157,7 @@ def new_api_get(bearer_token, bearer_client_id, url):
 
 def uptime():
     try:
-        started = new_api_get("7gkjizwidiphdfyfye96bplfvqf793", "xlgllr4fcmc382d9t65jztugtka5s3",
+        started = new_api_get("token here", "token here",
                               "streams?user_login=pokimane").json()["data"][0]["started_at"]
     except IndexError:  # channel is offline or channel doesnt exist
         uptime = None
@@ -169,7 +169,7 @@ def uptime():
 
 def authtoken():
     req = requests.post(
-        'https://id.twitch.tv/oauth2/token?client_id=xlgllr4fcmc382d9t65jztugtka5s3&client_secret=tdk6zmtuzno9ate5xjv0suvzcs09pp&grant_type=client_credentials')
+        'auth token')
     print(req.text)
 
 
